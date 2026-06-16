@@ -1,8 +1,11 @@
 import random
 
-secret = random.randint(1, 100)
-print("Угадай число от 1 до 100")
+x = int(input("От какого числа?: "))
+y = int(input("До какого числа?: "))
+secret = random.randint(x, y)
+print("Угадай число от", x, "до", y)
 tries = 0
+
 
 while True:
     guess = int(input("Твой вариант: "))
@@ -12,5 +15,9 @@ while True:
     elif guess > secret:
         print("Меньше")
     else:
-        print(f"Угадал! Это {secret}. Попыток: {tries}")
-        break
+        if tries == 1:
+            print(f"Угадал с первой попытки!  Это {secret}. Попыток: {tries}")
+            break
+        else:
+            print(f"Угадал! Это {secret}. Попыток: {tries}")
+            break
