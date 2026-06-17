@@ -11,6 +11,7 @@ def mode3():
     if a != 1 and a != 2:
         time.sleep(1)
         print("are you serious? :)")
+        time.sleep(3)
 mode3()
 
 def mode1():
@@ -41,6 +42,7 @@ def mode1():
                 else:
                     time.sleep(0.5)
                 print(f"Угадал! Это {secret}. Попыток: {tries}")
+                time.sleep(3)
                 break
 mode1()
 
@@ -66,4 +68,5 @@ def mode2():
                 else:
                      time.sleep(0.5)
                 print(f"Угадал! Это {secret}. Попыток: {tries}")
+                time.sleep(3)
                 break
