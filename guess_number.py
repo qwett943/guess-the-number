@@ -68,9 +68,20 @@ a: int = int(input("Введите 1/2: "))
 if a == 1:
         default_game()
 elif a == 2:
-        x = int(input("1 Число?:"))
-        y = int(input("2 Число?:"))
-        other_game(x, y)
+    while True:
+        try:
+            x = int(input("1 Число?:"))
+            time.sleep(0.5)
+            y = int(input("2 Число?:"))
+            time.sleep(0.5)
+            if x < y:
+                break
+            else:
+                print("1 Число должно быть больше 2!")
+        except ValueError:
+                time.sleep(0.5)
+                print("Введите числа, а не буквы!")
+    other_game(x, y)
 else:
     time.sleep(0.5)
     print("Введи 1/2!")
