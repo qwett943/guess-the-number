@@ -70,9 +70,9 @@ if a == 1:
 elif a == 2:
     while True:
         try:
-            x = int(input("1 Число?:"))
+            x = int(input("От какого числа?: "))
             time.sleep(0.5)
-            y = int(input("2 Число?:"))
+            y = int(input("До какого числа?: "))
             time.sleep(0.5)
             if x < y:
                 break
